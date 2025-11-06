@@ -1,0 +1,17 @@
+# Node modules in subfolders
+**/node_modules/
+
+# Environment files
+**/.env*
+
+# Build outputs
+**/build/
+**/dist/
+**/coverage/
+
+# Logs
+**/*.log
+
+# OS
+.DS_Store
+Thumbs.db

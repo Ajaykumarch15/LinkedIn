@@ -1,0 +1,142 @@
+/* Profile Card */
+.profile-card {
+    position: relative;
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+}
+
+/* Banner Section */
+.profile-banner-container {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.profile-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+    transition: transform 0.3s ease;
+}
+
+.profile-banner-container:hover .profile-banner {
+    transform: scale(1.02);
+}
+
+/* Camera Overlay (Shared Styles) */
+.image-upload-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-banner-container:hover .image-upload-btn,
+.avatar-wrapper:hover .image-upload-btn {
+    opacity: 1;
+}
+
+/* Banner Overlay */
+.banner-overlay {
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+}
+
+/* Avatar Section */
+.avatar-wrapper {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+}
+
+.avatar.large {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-overlay {
+    bottom: 5px;
+    right: 5px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+}
+
+/* Profile Info */
+.profile-info {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+.profile-info h3 {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.profile-info p {
+    color: #666;
+    margin: 4px 0;
+}
+
+/* Buttons */
+.profile-actions {
+    text-align: center;
+    padding: 15px 0 25px;
+}
+
+.profile-actions button {
+    margin: 0 5px;
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.profile-actions button:hover {
+    background: #004182;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-banner-container {
+        height: 160px;
+    }
+
+    .avatar-wrapper {
+        width: 80px;
+        height: 80px;
+        bottom: -40px;
+    }
+
+    .profile-info {
+        padding-top: 60px;
+    }
+}

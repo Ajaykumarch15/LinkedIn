@@ -1,0 +1,64 @@
+/* General Layout */
+.feed-container {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: #f3f2ef;
+    min-height: 100vh;
+}
+
+/* Left Column */
+.feed-left {
+    flex: 2;
+}
+
+/* Right Column */
+.feed-right {
+    flex: 1;
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+}
+
+/* Card Styling */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Welcome Panel */
+.welcome-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    color: #0a66c2;
+}
+
+.welcome-card p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Loading & Empty Feed */
+.loading-card,
+.empty-feed {
+    text-align: center;
+    color: #777;
+    font-size: 1rem;
+    padding: 2rem;
+}
+
+/* Feed Responsive */
+@media (max-width: 992px) {
+    .feed-container {
+        flex-direction: column;
+    }
+
+    .feed-right {
+        position: relative;
+        top: 0;
+    }
+}

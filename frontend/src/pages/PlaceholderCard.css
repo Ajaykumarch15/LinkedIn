@@ -1,0 +1,48 @@
+.placeholder-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 75vh;
+    background: #f3f2ef;
+    text-align: center;
+    padding: 2rem;
+}
+
+.placeholder-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem 3rem;
+    max-width: 520px;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.placeholder-card h1 {
+    color: #0a66c2;
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+}
+
+.placeholder-card p {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.placeholder-footer {
+    margin-top: 1.5rem;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

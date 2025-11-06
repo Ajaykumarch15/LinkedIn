@@ -1,0 +1,142 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0.4rem 1.2rem;
+    /* reduced vertical space */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 55px;
+    /* fixed height for consistent spacing */
+}
+
+/* Left Section */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    /* slightly tighter gap */
+}
+
+.nav-logo img {
+    height: 32px;
+    width: 32px;
+}
+
+/* Search Bar */
+.nav-search input {
+    border: none;
+    background: #eef3f8;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    width: 200px;
+    outline: none;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+.nav-search input:focus {
+    background: #e2e9f0;
+}
+
+/* Center Nav Links */
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-item {
+    color: #444;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.nav-item:hover {
+    color: #0a66c2;
+}
+
+/* Right Section */
+.nav-right {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.nav-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-username {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.nav-caret {
+    font-size: 0.65rem;
+    color: #555;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 42px;
+    /* adjusted for new navbar height */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    padding: 0.4rem;
+    z-index: 200;
+}
+
+.dropdown-menu button {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.dropdown-menu button:hover {
+    background: #f3f2ef;
+}
+
+.logout-btn {
+    color: #c00;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-center {
+        display: none;
+    }
+
+    .nav-search input {
+        width: 130px;
+    }
+}
